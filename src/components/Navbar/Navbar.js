@@ -57,6 +57,7 @@ function Navbar() {
       <div className="container-fluid">
         {/* Brand */}
         <a className="navbar-brand me-auto" href="#hero">
+          <img src="logo.png" alt=" " className="brand-logo" />
           Shine Creative
         </a>
 

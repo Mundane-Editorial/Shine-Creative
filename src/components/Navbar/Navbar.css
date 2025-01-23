@@ -1,77 +1,97 @@
-.navbar{
+.navbar {
     background-color: #fff;
     height: 60px;
     margin: 1rem;
     border-radius: 16px;
     padding: 0.5rem;
-    position: fixed; /* Makes the navbar fixed at the top */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Creates a shadow effect */
-    z-index: 1000; /* Ensures the navbar is above other elements */
-}
-
-.navbar-brand{
+    position: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
     font-weight: 500;
-    color: #009970;
+    color: #e11d48;
     font-size: 24px;
     transition: 0.3s color ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-logo {
+    width: 40px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle;
 }
-
-.contact-btn {
+  
+  .navbar-brand:visited,
+  .navbar-brand:active {
+      color: #E11D48; 
+  }
+  
+  .navbar-brand:hover {
+      color: #E11D48; 
+  }
+  
+  .contact-btn {
     background-color: #009970;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     padding: 8px 20px;
     border-radius: 50px;
     text-decoration: none;
     border: none;
     outline: none;
     transition: 0.3s background-color ease-in-out;
-}
-
-.contact-btn:hover {
+  }
+  
+  .contact-btn:hover {
     background-color: #00b383;
-    color: #009970;
-}
-
-.navbar-toggler {
+    scale: 1.05;
+    transition: 0.3s background-color ease-in-out;
+  }
+  
+  .navbar-toggler {
     border: none;
     font-size: 1.25rem;
-}
-
-.navbar-toggler:focus,
-.btn-close:focus {
+  }
+  
+  .navbar-toggler:focus,
+  .btn-close:focus {
     box-shadow: none;
     outline: none;
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     color: #666777;
     font-weight: 500;
     position: relative;
-}
-
-.nav-link:hover,
-.nav-link:active {
+  }
+  
+  .nav-link:hover,
+  .nav-link:active {
     color: #000;
-}
-
-@media (min-width: 992px) {
+  }
+  
+  @media (min-width: 992px) {
     .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: #009970;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #e11d48;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
     }
-
+  
     .nav-link:hover::before,
     .nav-link.active::before {
-        width: 100%;
-        visibility: visible;
+      width: 100%;
+      visibility: visible;
     }
-}
+  }
+  
