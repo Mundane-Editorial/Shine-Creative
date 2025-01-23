@@ -1,9 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Navbar.css';
 
 function Navbar() {
   const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
   const message = encodeURIComponent('Hi, I would like to get in touch with you.');
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('nav a'); // Select nav links
+    const sections = document.querySelectorAll('section'); // Select all sections
+
+    const activateLink = (link) => {
+      navLinks.forEach((nav) => nav.classList.remove('active'));
+      link.classList.add('active');
+    };
+
+    const handleScroll = () => {
+      let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute('href').includes(sectionId)) {
+              activateLink(link);
+            }
+          });
+        }
+      });
+    };
+
+    const handleLinkClick = (event) => {
+      event.preventDefault();
+      const targetSection = document.querySelector(event.target.getAttribute('href'));
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // Attach event listeners
+    window.addEventListener('scroll', handleScroll);
+    navLinks.forEach((link) => link.addEventListener('click', handleLinkClick));
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      navLinks.forEach((link) => link.removeEventListener('click', handleLinkClick));
+    };
+  }, []);
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
@@ -65,7 +112,9 @@ function Navbar() {
         {/* WhatsApp Button */}
         <button
           className="contact-btn"
-          onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')}
+          onClick={() =>
+            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+          }
         >
           <i className="bi bi-whatsapp"></i>
         </button>
