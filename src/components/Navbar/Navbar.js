@@ -1,64 +1,86 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
+  const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
+  const message = encodeURIComponent('Hi, I would like to get in touch with you.');
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Navbar
-        </Link>
+        {/* Brand */}
+        <a className="navbar-brand me-auto" href="#hero">
+          Shine Creative
+        </a>
+
+        {/* Offcanvas Menu */}
+        <div
+          className="offcanvas offcanvas-end"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+              Shine Creative
+            </h5>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2 active" href="#hero">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#aboutus">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#services">
+                  Services
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#pharmagifts">
+                  Gift Items
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#contact">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* WhatsApp Button */}
         <button
-          className="navbar-toggler"
+          className="contact-btn"
+          onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')}
+        >
+          <i className="bi bi-whatsapp"></i>
+        </button>
+
+        {/* Navbar Toggler */}
+        <button
+          className="navbar-toggler pe-10"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About Us
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/services">
-                Services
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/pharmagifts">
-                Pharma Gifts
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
       </div>
     </nav>
   );
