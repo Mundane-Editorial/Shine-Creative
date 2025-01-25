@@ -1,30 +1,23 @@
 import React from 'react';
 import './Herosection.css';
-
+import Carousel from '../carousel/carousel';
 function Herosection() {
   return (
-    <section id="hero" className="hero top-banner">
-      <div className="container-fluid px-0">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-5 col-md-6">
-              <h1 className="hero-title">One stop pharma printing solutions</h1>
-              <p className="hero-description">
-                We are a team of experienced professionals who are committed to providing you with the best possible printing services.
-              </p>
-              <div className="mt-4">
-                <button className="main-btn">Get in Touch</button>
-              </div>
-            </div>
-            <div className="col-lg-7 col-md-6 text-center">
-              {/* Add an image or additional content here if needed */}
-              <img
-                src="./assets/img/hero-image.jpg"
-                alt="Pharma Printing Solutions"
-                className="img-fluid hero-img"
-              />
-            </div>
-          </div>
+    <section id="hero" className="hero container-fluid">
+      <div className="row h-100">
+        {/* left text */}
+        <div className="left-text col-md-6">
+          <h1 class="display-4 fw-bold">Your One-Stop Pharma Printing Solutions</h1>
+          <p class="lead">
+            We are a team of experienced professionals committed to providing the best possible printing services to
+            meet your needs.
+          </p>
+          <button class="btn btn-primary btn-lg">Get in Touch</button>
+        </div>
+
+        {/* right context */}
+        <div className="right-text col-md-6">
+          <Carousel />
         </div>
       </div>
     </section>

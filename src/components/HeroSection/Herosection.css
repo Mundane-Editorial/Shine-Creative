@@ -1,45 +1,90 @@
+/* Hero Section */
 .hero {
-    background-color: #E11D48;
-    height: 100vh; /* Full viewport height */
-    width: 100%;
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Optional: Center horizontally */
-    overflow: hidden; /* Prevents scrollbars if content exceeds height */
+  background-color: #E11D48; /* Background color */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Vertically align content */
+  justify-content: center; /* Horizontally center the content */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.hero .container-fluid {
+  height: 100%; /* Full height for container */
+  padding: 0; /* Remove padding */
+}
+
+.hero .row {
+  height: 100%; /* Full height for the row */
+}
+
+.left-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align text at the bottom */
+  padding: 0 20px; /* Add some padding */
+}
+
+.left-text h1 {
+  color: white; /* White color for heading */
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.left-text p {
+  color: white; /* White color for paragraph */
+  font-size: 1.25rem; /* Slightly larger font for paragraph */
+  margin-bottom: 30px;
+}
+
+.left-text button {
+  background-color: white;
+  color: #E11D48; /* Button color */
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.left-text button:hover {
+  background-color: #e34e6a; /* Hover effect */
+  color: white;
+}
+
+.right-text {
+  display: flex;
+  justify-content: center; /* Center carousel horizontally */
+  align-items: flex-end; /* Align carousel at the bottom */
+  padding: 0 20px; /* Padding for right section */
+}
+
+.right-text .carousel {
+  width: 100%;
+  max-width: 500px; /* Limit the carousel width */
+  max-height: 500px; /* Limit the height of the carousel */
+}
+
+.right-text .carousel img {
+  border-radius: 10px; /* Rounded corners for images */
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .left-text {
+    text-align: center; /* Center text on smaller screens */
   }
-  
-  .hero .container {
-    height: 100%;
+
+  .left-text h1 {
+    font-size: 2rem; /* Adjust heading font size for small screens */
   }
-  
-  .hero-title {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
+
+  .left-text p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
-  
-  .hero-description {
-    color: white;
-    margin-top: 15px;
+
+  .right-text {
+    display: none; /* Hide the carousel on small screens */
   }
-  
-  .main-btn {
-    background-color: white;
-    color: #E11D48;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: all 0.3s;
-  }
-  
-  .main-btn:hover {
-    background-color: #e34e6a;
-    color: white;
-  }
-  
-  .hero-img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+}
