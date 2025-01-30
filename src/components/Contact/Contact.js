@@ -62,6 +62,16 @@ const Contact = () => {
                   />
                 </div>
                 <div className="mb-3">
+                  <input
+                    className="form-control"
+                    placeholder="Your phone number"
+                    type="tel"
+                    name="phone"
+                    pattern="^[0-9]{10}$"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
                   <textarea
                     className="form-control"
                     placeholder="Your message"
@@ -84,7 +94,7 @@ const Contact = () => {
           <div className="col-lg-6 d-flex justify-content-center align-items-center">
             <div className="map-container">
               <iframe
-                title='Google Maps Location fo shine creative'
+                title='Google Maps Location for Shine Creative'
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.9777749488928!2d77.10641792202728!3d30.90526449025201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f814c11da0189%3A0xe461223a80a90395!2sShine%20Creative!5e0!3m2!1sen!2sin!4v1737705017694!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
