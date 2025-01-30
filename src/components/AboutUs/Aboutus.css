@@ -34,14 +34,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* .container-right {
-    background-color: #007BFF;
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    height: 100%;            
-} */
-
 .btn-outline-primary {
     color: #E11D48;
     border-color: #E11D48;
@@ -51,6 +43,10 @@
     background-color: #E11D48;
     color: #fff;
     border-color: #E11D48;
+  }
+
+  .btn-outline-primary:active{
+    background-color: #E11D48;
   }
   
 

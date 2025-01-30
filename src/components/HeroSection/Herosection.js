@@ -6,13 +6,13 @@ function Herosection() {
     <section id="hero" className="hero container-fluid">
       <div className="row h-100">
         {/* left text */}
-        <div className="left-text col-md-6">
-          <h1 class="display-4 fw-bold">Your One-Stop Pharma Printing Solutions</h1>
-          <p class="lead">
+        <div className="col-md-6 left-text">
+          <h1 className="display-4 fw-bold">Your One-Stop Pharma Printing Solutions</h1>
+          <p className="lead">
             We are a team of experienced professionals committed to providing the best possible printing services to
             meet your needs.
           </p>
-          <button class="btn btn-primary btn-lg">Get in Touch</button>
+          <button className="btn btn-primary btn-lg">Get in Touch</button>
         </div>
 
         {/* right context */}
