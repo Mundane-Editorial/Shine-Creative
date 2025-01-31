@@ -1,90 +1,139 @@
-/* Hero Section */
-.hero {
-  background-color: #E11D48; /* Background color */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  align-items: center; /* Vertically align content */
-  justify-content: center; /* Horizontally center the content */
-  overflow: hidden; /* Prevent scrollbars */
+.banner_wrapper {
+    background-image: url('../../assets/background.jpg');
+    /* background-color: #fff; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center center;  /* Centers the image */
+    background-repeat: no-repeat;
 }
 
-.hero .container-fluid {
-  height: 100%; /* Full height for container */
-  padding: 0; /* Remove padding */
+.banner_wrapper .container {
+    background-color: rgba(255, 255, 255, 0.25); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 15px;
 }
 
-.hero .row {
-  height: 100%; /* Full height for the row */
+.left-container {
+    text-align: center;
+    max-width: 50%; /* Increase width */
+    min-height: 50vh;
+    padding: 5%; /* Increase padding for better spacing */
+    box-sizing: border-box;
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
-.left-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Align text at the bottom */
-  padding: 0 20px; /* Add some padding */
+.left-container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
 }
 
-.left-text h1 {
-  color: white; /* White color for heading */
-  font-size: 2.5rem; /* Larger font size */
-  font-weight: bold;
-  margin-bottom: 15px;
+.left-container h1 span {
+    color: #e11d48;
 }
 
-.left-text p {
-  color: white; /* White color for paragraph */
-  font-size: 1.25rem; /* Slightly larger font for paragraph */
-  margin-bottom: 30px;
+.left-container p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2.0rem;
+    word-wrap: break-word;
 }
 
-.left-text button {
-  background-color: white;
-  color: #E11D48; /* Button color */
-  border: none;
-  padding: 10px 25px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+.left-container .main-btn {
+    color: #e11d48;
+    border: 2px solid #e11d48;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 12px 30px;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
-.left-text button:hover {
-  background-color: #e34e6a; /* Hover effect */
-  color: white;
+.left-container .main-btn:hover {
+    background-color: #e11d48;
+    color: #fff;
 }
 
-.right-text {
-  display: flex;
-  justify-content: center; /* Center carousel horizontally */
-  align-items: flex-end; /* Align carousel at the bottom */
-  padding: 0 20px; /* Padding for right section */
+
+.right-container {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.right-text .carousel {
-  width: 100%;
-  max-width: 500px; /* Limit the carousel width */
-  max-height: 500px; /* Limit the height of the carousel */
+.right-container img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* max-height: 80vh; */
+
 }
 
-.right-text .carousel img {
-  border-radius: 10px; /* Rounded corners for images */
-  max-width: 100%;
-  height: auto;
+@media (max-width: 991px) {
+    .banner_wrapper .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-container {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .right-container {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .left-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .left-container p {
+        font-size: 1.125rem;
+    }
+
+    .left-container .main-btn {
+        font-size: 1rem;
+    }
+
+    .right-container img {
+        max-height: 60vh;
+    }
 }
 
-@media (max-width: 768px) {
-  .left-text {
-    text-align: center; /* Center text on smaller screens */
-  }
+@media (max-width: 767px) {
+    .banner_wrapper {
+        padding: 50px 15px;
+    }
 
-  .left-text h1 {
-    font-size: 2rem; /* Adjust heading font size for small screens */
-  }
+    .left-container h1 {
+        font-size: 2rem;
+    }
 
-  .left-text p {
-    font-size: 1rem; /* Adjust paragraph font size */
-  }
+    .left-container p {
+        font-size: 1rem;
+    }
 
-  .right-text {
-    display: none; /* Hide the carousel on small screens */
-  }
+    .left-container .main-btn {
+        font-size: 0.875rem;
+        padding: 10px 25px;
+    }
+
+    .right-container img {
+        max-height: 50vh;
+    }
 }

@@ -1,23 +1,23 @@
 import React from 'react';
 import './Herosection.css';
-import Carousel from '../carousel/carousel';
+import image from '../../assets/landing.jpg';
+import fox from '../../assets/fox-1.png';
 function Herosection() {
   return (
-    <section id="hero" className="hero container-fluid">
-      <div className="row h-100">
-        {/* left text */}
-        <div className="col-md-6 left-text">
-          <h1 className="display-4 fw-bold">Your One-Stop Pharma Printing Solutions</h1>
-          <p className="lead">
-            We are a team of experienced professionals committed to providing the best possible printing services to
-            meet your needs.
+    <section id="hero" className="banner_wrapper">
+      <div className="container d-flex justify-content-between align-items-center">
+        <div className="left-container text-center text-lg-start">
+          <h1><span>One Stop</span><br />Pharma printing solutions</h1>
+          <p>
+            Discover our high-quality printing solutions for the pharmaceutical industry. From labels and packaging to educational materials,
+            we deliver exceptional quality and reliability.
+            <br />
+            That's not it. We're not just about printing. We're about innovation and excellence.
           </p>
-          <button className="btn btn-primary btn-lg">Get in Touch</button>
+          <a className="main-btn mt-4" href="#aboutus">Learn More</a>
         </div>
-
-        {/* right context */}
-        <div className="right-text col-md-6">
-          <Carousel />
+        <div className="right-container text-center">
+          <img src={image} className="img-fluid" alt="Food Banner" />
         </div>
       </div>
     </section>
