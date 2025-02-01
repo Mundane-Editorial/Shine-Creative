@@ -8,7 +8,7 @@ function Aboutus() {
         <div className="row justify-content-space-between gap-5">
           {/* Left Content */}
           <div className="col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start">
-            <h2 className="section-title mb-4">Who We Are</h2>
+            <h2 className="section-title mb-4">Who We <span>Are</span></h2>
             <p className="lead mb-4">
               We are a passionate team dedicated to delivering innovative
               solutions for our clients. With expertise in cutting-edge
@@ -20,7 +20,7 @@ function Aboutus() {
               and engage users, while driving measurable results for businesses.
             </p>
             <div className="mt-4">
-              <button className="btn btn-outline-primary">Contact Us</button>
+              <a className="btn btn-outline-primary" href="#contact">Contact Us</a>
             </div>
           </div>
 

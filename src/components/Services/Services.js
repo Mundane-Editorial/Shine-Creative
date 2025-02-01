@@ -49,7 +49,7 @@ function Services() {
             <p className="text-secondary mb-5 text-center">
               We offer a wide range of high-quality printing solutions for the pharmaceutical industry, including labels, packaging, Catalogs, Product Cards, and many more.
             </p>
-            <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+            <hr className="w-80 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
           </div>
         </div>
       </div>

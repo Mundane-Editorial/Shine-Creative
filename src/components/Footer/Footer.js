@@ -32,9 +32,11 @@ function Footer() {
             <div className="col-md-6 item text">
               <h3>Shine Creative</h3>
               <p>
-                Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus.
-                Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget
-                velit pulvinar dictum vel in justo.
+                Vyas Complex, Opp. JBT Road, Kotlanala, Solan - 173212, HP.
+                <br />
+                Reach Us at : +91 98170-78978
+                <br />
+                Email Us at : shinecreative@rediffmail.com
               </p>
             </div>
 

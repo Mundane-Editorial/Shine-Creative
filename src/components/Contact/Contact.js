@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';  // Make sure to import the styles
 
 const Contact = () => {
-  const [result, setResult] = useState("");
-
   const onSubmit = async (e) => {
     e.preventDefault();
-    setResult("Sending...");
+    toast.info("Sending...", { autoClose: 2000 }); // Display info toast when sending
+
     const formData = new FormData(e.target);
     formData.append("access_key", "e9ec8090-0773-419a-ad34-9de6f9047880");
 
@@ -18,16 +19,12 @@ const Contact = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Message sent successfully!");
+      toast.success("Message sent successfully!");  // Success toast
       e.target.reset();
     } else {
-      setResult("Error sending message. Please try again.");
-      setResult(data.message);
+      toast.error("Error sending message. Please try again.");  // Error toast
+      toast.error(data.message);
     }
-    setTimeout(() => {
-      setResult("");
-    }, 5000);
-    e.target.reset();
   };
 
   return (
@@ -84,9 +81,6 @@ const Contact = () => {
                   <button className="btn btn-primary" type="submit">Send</button>
                 </div>
               </form>
-              <div className="d-flex justify-content-center align-items-center">
-                {result && <p>{result}</p>}
-              </div>
             </div>
           </div>
 
@@ -94,7 +88,7 @@ const Contact = () => {
           <div className="col-lg-6 d-flex justify-content-center align-items-center">
             <div className="map-container">
               <iframe
-                title='Google Maps Location for Shine Creative'
+                title="Google Maps Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.9777749488928!2d77.10641792202728!3d30.90526449025201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f814c11da0189%3A0xe461223a80a90395!2sShine%20Creative!5e0!3m2!1sen!2sin!4v1737705017694!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
@@ -108,6 +102,19 @@ const Contact = () => {
 
         </div>
       </div>
+
+      {/* ToastContainer for react-toastify */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </section>
   );
 };

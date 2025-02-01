@@ -41,7 +41,7 @@ function Pharmagifts() {
               reflects your organization's values and makes every recipient feel valued.
             </p>
             <div className="mt-4">
-              <a className="main-btn mt-1" href="#aboutus">Conditions Applied*</a>
+              <a className="main-btn mt-1" href="#">Conditions Applied*</a>
             </div>
           </div>
 

@@ -44,10 +44,6 @@
     color: #fff;
     border-color: #E11D48;
   }
-
-  .btn-outline-primary:active{
-    background-color: #E11D48;
-  }
   
 
 @media (max-width: 768px) {
