@@ -1,7 +1,7 @@
 import React from 'react';
 import './Herosection.css';
 import image from '../../assets/landing.jpg';
-import fox from '../../assets/fox-1.png';
+// import fox from '../../assets/fox-1.png';
 function Herosection() {
   return (
     <section id="hero" className="banner_wrapper">
