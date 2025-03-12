@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Shine-Creative/static/css/main.efca0968.css",
+    "main.js": "/Shine-Creative/static/js/main.513fbfcf.js",
+    "static/js/453.61be4a7a.chunk.js": "/Shine-Creative/static/js/453.61be4a7a.chunk.js",
+    "static/media/background.jpg": "/Shine-Creative/static/media/background.b7bc2d2b08b78f4cc86e.jpg",
+    "static/media/landing.jpg": "/Shine-Creative/static/media/landing.24d95086719d82818ae9.jpg",
+    "index.html": "/Shine-Creative/index.html",
+    "main.efca0968.css.map": "/Shine-Creative/static/css/main.efca0968.css.map",
+    "main.513fbfcf.js.map": "/Shine-Creative/static/js/main.513fbfcf.js.map",
+    "453.61be4a7a.chunk.js.map": "/Shine-Creative/static/js/453.61be4a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efca0968.css",
+    "static/js/main.513fbfcf.js"
+  ]
+}
